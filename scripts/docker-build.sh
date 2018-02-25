@@ -1,5 +1,6 @@
 #!/bin/bash
 
+docker login 
 PWD=`pwd`
 BASE=$(dirname $PWD)
 MSDIR=$BASE/microservice-demo
