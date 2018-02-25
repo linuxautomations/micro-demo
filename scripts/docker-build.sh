@@ -4,7 +4,7 @@ PWD=`pwd`
 BASE=$(dirname $PWD)
 MSDIR=$BASE/microservice-demo
 
-LIST=(`ls -l  | grep ^d | awk '{print $NF}'`)
+LIST=(`ls -l $MSDIR | grep ^d | awk '{print $NF}'`)
 
 for i in ${LIST[*]}; do 
     IMAGE="linuxautomations/$i"
