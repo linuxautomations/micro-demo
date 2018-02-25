@@ -6,7 +6,12 @@
         {
             "label": "PUSH",
             "type": "shell",
-            "command": "git add -A && git commit -m Upload && git push origin master"
+            "command": "git add -A && git commit -m Upload && git push origin master",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
+        
     ]
 }
