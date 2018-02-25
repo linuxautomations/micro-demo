@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker login 
+docker login -u rkalluru -p osicpl@1
 PWD=`pwd`
 BASE=$(dirname $PWD)
 MSDIR=$BASE/microservice-demo
