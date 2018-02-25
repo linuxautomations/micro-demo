@@ -12,5 +12,5 @@ for i in ${LIST[*]}; do
     IMAGE=$(echo $IMAGE | sed -e 's/microservice-demo/ms/')
     cd $MSDIR/$i 
     docker build -t $IMAGE .
-    exit 
+    docker push $IMAGE 
 done
