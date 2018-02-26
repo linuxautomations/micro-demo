@@ -1,29 +1,29 @@
 version: '3'
 services:
   eureka:
-    build: linuxautomations/ms-eureka-server
+    image: linuxautomations/ms-eureka-server
     ports:
       - "8761:8761"
   customer:
-    build: linuxautomations/ms-customer
+    image: linuxautomations/ms-customer
     links:
      - eureka
   catalog:
-    build: linuxautomations/ms-catalog
+    image: linuxautomations/ms-catalog
     links:
      - eureka
   order:
-    build: linuxautomations/ms-order
+    image: linuxautomations/ms-order
     links:
      - eureka
   zuul:
-    build: linuxautomations/ms-zuul-server
+    image: linuxautomations/ms-zuul-server
     links:
      - eureka
     ports:
       - "8080:8080"
   turbine:
-    build: linuxautomations/ms-turbine-server
+    image: linuxautomations/ms-turbine-server
     links:
      - eureka
     ports:
