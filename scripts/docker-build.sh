@@ -11,7 +11,8 @@ for i in ${LIST[*]}; do
     IMAGE="linuxautomations/$i"
     IMAGE=$(echo $IMAGE | sed -e 's/microservice-demo/ms/')
     cd $MSDIR/$i 
-    docker build -t $IMAGE .
-    docker push $IMAGE 
+    echo "Building Image :: $IMAGE"
+    docker build -t $IMAGE . &>/dev/null 
+    docker push $IMAGE  &>/dev/null
 done
 
