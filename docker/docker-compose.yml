@@ -1,29 +1,29 @@
 version: '3'
 services:
   eureka:
-    build: ../microservice-demo/microservice-demo-eureka-server
+    build: linuxautomations/ms-eureka-server
     ports:
       - "8761:8761"
   customer:
-    build: ../microservice-demo/microservice-demo-customer
+    build: linuxautomations/ms-customer
     links:
      - eureka
   catalog:
-    build: ../microservice-demo/microservice-demo-catalog
+    build: linuxautomations/ms-catalog
     links:
      - eureka
   order:
-    build: ../microservice-demo/microservice-demo-order
+    build: linuxautomations/ms-order
     links:
      - eureka
   zuul:
-    build: ../microservice-demo/microservice-demo-zuul-server
+    build: linuxautomations/ms-zuul-server
     links:
      - eureka
     ports:
       - "8080:8080"
   turbine:
-    build: ../microservice-demo/microservice-demo-turbine-server
+    build: linuxautomations/ms-turbine-server
     links:
      - eureka
     ports:
