@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: eureka
+spec:
+  containers:
+    - name: eureka
+      image: linuxautomations/ms-eureka-server
+      ports:
+        - containerPort: 8761
+    
+    - name: customer
+      image: linuxautomations/ms-customer
+      
+    - name: catalog
+      image: linuxautomations/ms-catalog
+
+    - name: order
+      image: linuxautomations/ms-order
+
+    - name: zuul
+      image: linuxautomations/ms-zuul-server
+      ports:
+        - containerPort: 8080
+
+    - name: turbine
+      image: linuxautomations/ms-turbine-server
+      ports:
+        - containerPort: 8989
+        
