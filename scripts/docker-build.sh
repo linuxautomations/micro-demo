@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker login -u rkalluru -p osicpl@1
+docker login -u rkalluru --password-stdin
 PWD=`pwd`
 BASE=$(dirname $PWD)
 MSDIR=$BASE/microservice-demo
