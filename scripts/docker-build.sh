@@ -14,3 +14,4 @@ for i in ${LIST[*]}; do
     docker build -t $IMAGE .
     docker push $IMAGE 
 done
+
