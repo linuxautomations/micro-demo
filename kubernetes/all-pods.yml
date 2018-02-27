@@ -8,6 +8,7 @@ spec:
       image: linuxautomations/ms-eureka-server
       ports:
         - containerPort: 8761
-    
+    - name: customer
+      image: linuxautomations/ms-customer
 
 
