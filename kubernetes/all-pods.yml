@@ -6,22 +6,28 @@ spec:
   containers:
     - name: eureka
       image: linuxautomations/ms-eureka-server
+      imagePullPolicy: Always
       ports:
         - containerPort: 8761
 
     - name: customer
       image: linuxautomations/ms-customer
+      imagePullPolicy: Always
     
     - name: catalog
       image: linuxautomations/ms-catalog
+      imagePullPolicy: Always
 
     - name: order
       image: linuxautomations/ms-order
+      imagePullPolicy: Always
 
     - name: zuul
       image: linuxautomations/ms-zuul-server
+      imagePullPolicy: Always
       ports:
         - containerPort: 8080
       
     - name: turbine
+      imagePullPolicy: Always
       image: linuxautomations/ms-turbine-server
