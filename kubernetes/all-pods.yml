@@ -22,3 +22,8 @@ spec:
       image: linuxautomations/ms-zuul-server
       ports:
         - containerPort: 8080
+      
+    - name: turbine
+      image: linuxautomations/ms-turbine-server
+      ports:
+        - containerPort: 8989
