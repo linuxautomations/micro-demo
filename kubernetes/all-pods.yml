@@ -25,5 +25,3 @@ spec:
       
     - name: turbine
       image: linuxautomations/ms-turbine-server
-      ports:
-        - containerPort: 8989
