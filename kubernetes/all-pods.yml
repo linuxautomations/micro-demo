@@ -27,7 +27,4 @@ spec:
       imagePullPolicy: Always
       ports:
         - containerPort: 8080
-      
-    - name: turbine
-      imagePullPolicy: Always
-      image: linuxautomations/ms-turbine-server
+
